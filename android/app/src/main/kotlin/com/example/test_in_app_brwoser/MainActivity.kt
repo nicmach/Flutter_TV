@@ -1,4 +1,4 @@
-package com.example.test_in_app_brwoser
+package com.thueringen.lokal.tv
 
 import io.flutter.embedding.android.FlutterActivity
 

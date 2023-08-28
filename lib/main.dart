@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Thüringen Lokal TV',
+      title: 'Thüringer Lokal TV',
       theme: ThemeData(
 
         primarySwatch: Colors.blue,
@@ -50,8 +50,14 @@ class _MyMainPageState extends State<MyMainPage> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: const [
-          Text("Datenschutz"),
-          Icon(Icons.gpp_maybe),
+          Flexible (
+            child:Text(
+              'Genaue Details zum Datenschutz finden sich auf den einzelnen Seiten.',
+              textAlign: TextAlign.center,
+              // overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            )
+          ),
         ],
       ),
     ),
@@ -59,8 +65,54 @@ class _MyMainPageState extends State<MyMainPage> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: const [
-          Text("Impressum"),
-          Icon(Icons.error_outlined),
+          Flexible (
+            child:const Text.rich(
+              TextSpan(
+                children: <TextSpan>[
+                  TextSpan(text: ' Impressum\n ', style: TextStyle(fontWeight: FontWeight.bold)),
+                  TextSpan(text: 'GML Mediengesellschaft mbH\nAmtsgasse 2\n04600 Altenburg'),
+                  TextSpan(text: ' Telefon: 03447 316595\nTelefax: 03447 375611\nE-Mail: postmaster@gml-mediengesellschaft.de\n'),
+                  TextSpan(text: '\nVertreten durch:\n', style: TextStyle(fontWeight: FontWeight.bold)),
+                  TextSpan(text: ' Dipl.-kfm. Mike Langer\n'),
+                  TextSpan(text: '\nRegistereintrag:\n', style: TextStyle(fontWeight: FontWeight.bold)),
+                  TextSpan(text: ' Eingetragen im Handelsregister.\nRegistergericht: Jena\nRegisternummer: 503775\n'),
+                  TextSpan(text: '\nAufsichtsbehörde:\n', style: TextStyle(fontWeight: FontWeight.bold)),
+                  TextSpan(text: ' Thüringer Landesmedienanstalt\n'),
+                  TextSpan(text: '\nVerantwortlich für den Inhalt ', style: TextStyle(fontWeight: FontWeight.bold)),
+                  TextSpan(text: '(gem. § 55 Abs. 2 RStV):\n'),
+                  TextSpan(text: 'Redaktionsleitung: Mike Langer\n'),
+                ],
+              ),
+              textAlign: TextAlign.center,
+            )
+          ),
+          /*Text('''
+Impressum
+
+GML Mediengesellschaft mbH
+Amtsgasse 2
+04600 Altenburg
+
+Telefon: 03447 316595
+Telefax: 03447 375611
+E-Mail: postmaster@gml-mediengesellschaft.de
+
+Vertreten durch:
+Dipl.-kfm. Mike Langer
+
+Registereintrag:
+Eingetragen im Handelsregister.
+Registergericht: Jena
+Registernummer: 503775
+
+Aufsichtsbehörde: Thüringer Landesmedienanstalt
+
+Verantwortlich für den Inhalt (gem. § 55 Abs. 2 RStV):
+Redaktionsleitung: Mike Langer
+        ''',
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontWeight: FontWeight.bold),
+          ),*/
         ],
       ),
     ),
@@ -78,7 +130,7 @@ class _MyMainPageState extends State<MyMainPage> {
     return Scaffold(
       appBar: AppBar(
           backgroundColor: Color(0xFFDF011B),
-          title: const Text('Thüringen Lokal TV')
+          title: const Text('Thüringer Lokal TV')
       ),
       body: Center(
         child: _pages.elementAt(_selectedIndex),

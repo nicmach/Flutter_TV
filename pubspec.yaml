@@ -45,13 +45,14 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
+  change_app_package_name: ^1.1.0
   flutter_lints: ^2.0.0
   flutter_launcher_icons: ^0.11.0
 
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/1.0x/tlm_logo.png"
+  image_path: "assets/1.0x/TR-Icon_Quadrat_RGB.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -76,6 +77,8 @@ flutter:
     - assets/1.0x/Salve_TV.jpg
     - assets/1.0x/SRF_TV.jpg
     - assets/1.0x/ABG_Wide.jpg
+    - assets/1.0x/TR-Icon_Quadrat_RGB.png
+    - assets/1.0x/TR-Icon_Kreis_RGB.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

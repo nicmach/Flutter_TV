@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.test_in_app_brwoser">
+    package="com.thueringen.lokal.tv">
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="Thüringer Lokal Fernsehen"
+        android:label="Thüringer Lokal TV"
         android:name="${applicationName}"
         android:networkSecurityConfig="@xml/network_security_config"
         android:icon="@mipmap/ic_launcher">
